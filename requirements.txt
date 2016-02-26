@@ -22,3 +22,8 @@ PyYAML==3.11
 # https://pypi.python.org/pypi/schema/0.4.0
 schema==0.4.0
 
+
+# Convert functions into multi-command program breezily.
+# https://pypi.python.org/pypi/clime/0.3.1
+clime==0.3.1
+

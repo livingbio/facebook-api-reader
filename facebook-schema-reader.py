@@ -113,11 +113,14 @@ def parse_doc(url, fields=set()):
 
             return
 
-if __name__ == '__main__':
+def auto_config():
     import yaml
     config = yaml.load(open('config.yml'))
     for k in config['nodes']:
         parse_doc(**config['nodes'][k])
+
+if __name__ == '__main__':
+    import clime.now
 
     # parse_doc('https://developers.facebook.com/docs/graph-api/reference/v2.3/comment')
     # parse_doc('https://developers.facebook.com/docs/graph-api/reference/v2.3/link')
