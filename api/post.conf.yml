@@ -1,0 +1,37 @@
+accept_fields: [id, caption, created_time, description, from, icon, link, message, name, picture, privacy, shares, source, type, updated_time]
+update_fields: [caption, description, icon, link, message, name, privacy, source]
+insert_fields: [caption, description, icon, link, message, name, object]
+fields:
+    object:
+        desp: The target profile of the post
+        name: object
+        type: Profile
+    privacy:
+        desp: The privacy settings of the post. enum{EVERYONE, ALL_FRIENDS, FRIENDS_OF_FRIENDS, SELF}
+        name: privacy
+        type: string
+
+edges:
+    likes:
+        type: Like
+
+    comments:
+        type: Comment
+
+    reports:
+        type: Report
+
+
+# while share, create a new post
+
+apis:
+    search:
+        desp: search post
+        method: get
+        params:
+            q:
+                type: string
+                desp: keywords
+            user:
+                type: string
+                desp: user's id

@@ -1,0 +1,26 @@
+fields:
+  application: {default: false, desp: 'The app responsible for generating the notification.
+      Some of the core Facebook features have their own app that shows up here, such
+      as likes when someone likes another person''s content.', name: application,
+    required: false, type: App}
+  created_time: {default: false, desp: When the notification was created., name: created_time,
+    required: false, type: datetime}
+  from: {default: false, desp: 'The entity (user, page, app, etc.) that ''sent'',
+      or is the source of the notification.', name: from, required: false, type: Profile}
+  id: {default: false, desp: The notification's id., name: id, required: false, type: string}
+  link: {default: false, desp: The URL that clicking on the notification would take
+      someone., name: link, required: false, type: string}
+  object: {default: false, desp: 'The object (this can be a post, a photo, a comment,
+      etc.) that was the subject of the notification.', name: object, required: false,
+    type: Object}
+  title: {default: false, desp: The message text in the notification., name: title,
+    required: false, type: string}
+  to: {default: false, desp: The entity that received the notification., name: to,
+    required: false, type: User}
+  unread: {default: false, desp: Indicates that the notification is unread. Note that
+      'read' notifications will not be accessible., name: unread, required: false,
+    type: int}
+  updated_time: {default: false, desp: When the notification was last updated., name: updated_time,
+    required: false, type: datetime}
+name: notification
+type: node

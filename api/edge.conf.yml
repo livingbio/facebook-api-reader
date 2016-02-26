@@ -1,0 +1,14 @@
+# edges:
+#     friends:
+#         from: [User]
+#         to: [User]
+#     likes:
+#         from: [User]
+#         to: [Comment, Page, Post]
+#     comments:
+#         from: [User]
+#         to: [Comment, Page, Post]
+#     feed:
+#         from: [User, Page]
+#         to: [Post]
+

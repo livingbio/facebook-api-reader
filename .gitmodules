@@ -1,0 +1,3 @@
+[submodule "lib/oauth2-appengine"]
+	path = lib/oauth2-appengine
+	url = git@github.com:Tagtoo/oauth2-appengine.git

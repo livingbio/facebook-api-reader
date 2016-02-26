@@ -1,0 +1,46 @@
+fields:
+  album: {default: false, desp: The album this photo is in, name: album, required: false,
+    type: Album}
+  backdated_time: {default: true, desp: A user-specified time for when this object
+      was created, name: backdated_time, required: false, type: datetime}
+  backdated_time_granularity: {default: true, desp: How accurate the backdated time
+      is, name: backdated_time_granularity, required: false, type: string}
+  created_time: {default: true, desp: The time this photo was published, name: created_time,
+    required: false, type: datetime}
+  event: {default: false, desp: 'If this object has a place, the event associated
+      with the place', name: event, required: false, type: Event}
+  from: {default: true, desp: The profile (user or page) that uploaded this photo,
+    name: from, required: false, type: Profile}
+  height: {default: true, desp: The height of this photo in pixels, name: height,
+    required: false, type: unsigned}
+  icon: {default: true, desp: The icon that Facebook displays when photos are published
+      to News Feed, name: icon, required: false, type: string}
+  id: {default: true, desp: The photo ID, name: id, required: false, type: numberic_string}
+  images: {default: true, desp: The different stored representations of the photo.
+      Can vary in number based upon the size of the original photo., name: images,
+    required: false, type: 'PlatformImageSource[]'}
+  link: {default: true, desp: A link to the photo on Facebook, name: link, required: false,
+    type: string}
+  name: {default: true, desp: The user-provided caption given to this photo. Corresponds
+      to caption when creating photos, name: name, required: false, type: string}
+  name_tags: {default: true, desp: 'An array containing an array of objects mentioned
+      in the name field which contain the id, name, and type of each object as well
+      as the offset and length which can be used to match it up with its corresponding
+      string in the name field', name: name_tags, required: false, type: 'map<string,'}
+  page_story_id: {default: false, desp: ID of the page story this corresponds to.
+      May not be on all photos. Applies only to published photos, name: page_story_id,
+    required: false, type: string}
+  picture: {default: true, desp: Link to the 100px wide representation of this photo,
+    name: picture, required: false, type: string}
+  place: {default: true, desp: 'Location associated with the photo, if any', name: place,
+    required: false, type: Place}
+  position: {default: true, desp: Deprecated. Returns 0Deprecated, name: position,
+    required: false, type: unsigned}
+  source: {default: true, desp: Deprecated. Use images insteadDeprecated, name: source,
+    required: false, type: string}
+  updated_time: {default: true, desp: The last time the photo was updated, name: updated_time,
+    required: false, type: datetime}
+  width: {default: true, desp: The width of this photo in pixels, name: width, required: false,
+    type: unsigned}
+name: photo
+type: node

@@ -1,0 +1,3 @@
+accept_fields: [id, source]
+update_fields: [source]
+insert_fields: [source]

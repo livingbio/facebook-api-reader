@@ -1,0 +1,9 @@
+fields:
+  description: {default: true, desp: Description, name: description, required: false,
+    type: string}
+  from: {default: true, desp: From, name: from, required: false, type: User}
+  id: {default: true, desp: ID, name: id, required: false, type: numberic_string}
+  name: {default: true, desp: Name, name: name, required: false, type: string}
+  with: {default: true, desp: Tagged users, name: with, required: false, type: 'User[]'}
+name: experience
+type: node

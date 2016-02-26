@@ -1,0 +1,32 @@
+fields:
+  can_upload: {default: false, desp: Whether the viewer can upload photos to this
+      album., name: can_upload, required: false, type: boolean}
+  count: {default: false, desp: Number of photos in this album., name: count, required: false,
+    type: int}
+  cover_photo: {default: false, desp: The ID of the album's cover photo., name: cover_photo,
+    required: false, type: string}
+  created_time: {default: false, desp: The time the album was initially created.,
+    name: created_time, required: false, type: datetime}
+  description: {default: false, desp: The description of the album., name: description,
+    required: false, type: string}
+  event: {default: false, desp: The event associated with this album., name: event,
+    required: false, type: Event}
+  from: {default: false, desp: The profile that created the album., name: from, required: false,
+    type: User}
+  id: {default: false, desp: The album ID., name: id, required: false, type: string}
+  link: {default: false, desp: A link to this album on Facebook., name: link, required: false,
+    type: string}
+  location: {default: false, desp: The textual location of the album., name: location,
+    required: false, type: string}
+  name: {default: false, desp: The title of the album., name: name, required: false,
+    type: string}
+  place: {default: false, desp: The place associated with this album., name: place,
+    required: false, type: Page}
+  privacy: {default: false, desp: The privacy settings for the album., name: privacy,
+    required: false, type: string}
+  type: {default: false, desp: The type of the album., name: type, required: false,
+    type: string}
+  updated_time: {default: false, desp: The last time the album was updated., name: updated_time,
+    required: false, type: datetime}
+name: album
+type: node

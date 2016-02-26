@@ -1,0 +1,129 @@
+fields:
+  about: {default: true, desp: The About Me section of this person's profile, name: about,
+    required: false, type: string}
+  address: {default: true, desp: The person's address, name: address, required: false,
+    type: Location}
+  age_range: {default: false, desp: 'The age segment for this person expressed as
+      a minimum and maximum age. For example, more than 18, less than 21.', name: age_range,
+    required: true, type: AgeRange}
+  bio: {default: true, desp: The person's bio, name: bio, required: false, type: string}
+  birthday: {default: true, desp: 'The person''s birthday.  This is a fixed format
+      string, like MM/DD/YYYY.  However, people can control who can see the year they
+      were born separately from the month and day so this string can be only the year
+      (YYYY) or the month + day (MM/DD)', name: birthday, required: true, type: string}
+  context: {default: false, desp: Social context for this person, name: context, required: false,
+    type: UserContext}
+  cover: {default: false, desp: The person's cover photo, name: cover, required: false,
+    type: CoverPhoto}
+  currency: {default: false, desp: The person's local currency information, name: currency,
+    required: false, type: Currency}
+  devices: {default: false, desp: The list of devices the person is using. This will
+      return only iOS and Android devices, name: devices, required: false, type: 'UserDevice[]'}
+  education: {default: true, desp: The person's education, name: education, required: false,
+    type: 'EducationExperience[]'}
+  email: {default: true, desp: The person's primary email address listed on their
+      profile. This field will not be returned if no valid email address is available,
+    name: email, required: true, type: string}
+  favorite_athletes: {default: true, desp: Athletes the person likes, name: favorite_athletes,
+    required: false, type: 'Experience[]'}
+  favorite_teams: {default: true, desp: Sports teams the person likes, name: favorite_teams,
+    required: false, type: 'Experience[]'}
+  first_name: {default: true, desp: The person's first name, name: first_name, required: true,
+    type: string}
+  gender: {default: true, desp: 'The gender selected by this person, male or female.
+      This value will be omitted if the gender is set to a custom value', name: gender,
+    required: true, type: string}
+  hometown: {default: true, desp: The person's hometown, name: hometown, required: false,
+    type: Page}
+  id: {default: true, desp: The id of this person's user account. This ID is unique
+      to each app and cannot be used across different apps. Our upgrade guide provides
+      more information about app-specific IDs, name: id, required: true, type: numberic_string}
+  inspirational_people: {default: true, desp: The person's inspirational people, name: inspirational_people,
+    required: false, type: 'Experience[]'}
+  install_type: {default: false, desp: Install type, name: install_type, required: false,
+    type: string}
+  installed: {default: false, desp: 'Is the app making the request installed?', name: installed,
+    required: false, type: bool}
+  interested_in: {default: true, desp: Genders the person is interested in, name: interested_in,
+    required: false, type: 'string[]'}
+  is_shared_login: {default: false, desp: Is this a shared login (e.g. a gray user),
+    name: is_shared_login, required: false, type: bool}
+  is_verified: {default: false, desp: People with large numbers of followers can have
+      the authenticity of their identity manually verified by Facebook. This field
+      indicates whether the person's profile is verified in this way. This is distinct
+      from the verified field, name: is_verified, required: false, type: bool}
+  languages: {default: true, desp: Facebook Pages representing the languages this
+      person knows, name: languages, required: false, type: 'Experience[]'}
+  last_name: {default: true, desp: The person's last name, name: last_name, required: true,
+    type: string}
+  link: {default: true, desp: A link to the person's Timeline, name: link, required: true,
+    type: string}
+  locale: {default: true, desp: The person's locale, name: locale, required: true,
+    type: string}
+  location: {default: true, desp: The person's current location as entered by them
+      on their profile. This field is not related to check-ins, name: location, required: true,
+    type: Page}
+  meeting_for: {default: true, desp: What the person is interested in meeting for,
+    name: meeting_for, required: false, type: 'string[]'}
+  middle_name: {default: true, desp: The person's middle name, name: middle_name,
+    required: true, type: string}
+  name: {default: true, desp: The person's full name, name: name, required: true,
+    type: string}
+  name_format: {default: false, desp: 'The person''s name formatted to correctly handle
+      Chinese, Japanese, or Korean ordering', name: name_format, required: false,
+    type: string}
+  payment_pricepoints: {default: false, desp: The person's payment pricepoints, name: payment_pricepoints,
+    required: false, type: PaymentPricepoints}
+  political: {default: true, desp: The person's political views, name: political,
+    required: false, type: string}
+  quotes: {default: true, desp: The person's favorite quotes, name: quotes, required: false,
+    type: string}
+  relationship_status: {default: true, desp: The person's relationship status, name: relationship_status,
+    required: false, type: string}
+  religion: {default: true, desp: The person's religion, name: religion, required: false,
+    type: string}
+  security_settings: {default: false, desp: Security settings, name: security_settings,
+    required: false, type: SecuritySettings}
+  shared_login_upgrade_required_by: {default: false, desp: The time that the shared
+      loginneeds to be upgraded to Business Manager by, name: shared_login_upgrade_required_by,
+    required: false, type: datetime}
+  significant_other: {default: true, desp: The person's significant other, name: significant_other,
+    required: false, type: User}
+  sports: {default: true, desp: Sports this person likes, name: sports, required: false,
+    type: 'Experience[]'}
+  suggested_groups: {default: false, desp: Suggested group threads, name: suggested_groups,
+    required: false, type: 'MessagingSuggestedGroup[]'}
+  test_group: {default: false, desp: Platform test group, name: test_group, required: false,
+    type: unsigned}
+  third_party_id: {default: false, desp: 'A string containing an anonymous, but unique
+      identifier for the person. You can use this identifier with third parties',
+    name: third_party_id, required: false, type: string}
+  timezone: {default: true, desp: The person's current timezone offset from UTC, name: timezone,
+    required: true, type: float}
+  token_for_business: {default: false, desp: A token that is the same across a business's
+      apps. Access to this token requires that the person be logged into your app.
+      This token will change if the business owning the app changes, name: token_for_business,
+    required: false, type: string}
+  updated_time: {default: true, desp: Updated time, name: updated_time, required: false,
+    type: datetime}
+  verified: {default: true, desp: 'Indicates whether the account has been verified.
+      This is distinct from the is_verified field. Someone is considered verified
+      if they take any of the following actions:
+
+      Register for mobile
+
+      Confirm their account via SMS
+
+      Enter a valid credit card
+
+      ', name: verified, required: false, type: bool}
+  video_upload_limits: {default: false, desp: Video upload limits, name: video_upload_limits,
+    required: false, type: VideoUploadLimits}
+  viewer_can_send_gift: {default: false, desp: 'Can the viewer send a gift to this
+      person?', name: viewer_can_send_gift, required: false, type: bool}
+  website: {default: true, desp: The person's website, name: website, required: false,
+    type: string}
+  work: {default: true, desp: Details of a person`s work experience, name: work, required: false,
+    type: 'WorkExperience[]'}
+name: user
+type: node

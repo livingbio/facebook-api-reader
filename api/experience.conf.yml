@@ -1,0 +1,8 @@
+accept_fields: [id, description, name, from, ext]
+update_fields: [description, name, ext]
+insert_fields: [name, description, ext]
+fields:
+    ext:
+        desp: The extension field of experience.
+        name: ext
+        type: dict

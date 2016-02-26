@@ -1,0 +1,15 @@
+fields:
+  cover_id: {default: true, desp: Deprecated. Please use the id field instead, name: cover_id,
+    required: false, type: id}
+  id: {default: true, desp: The ID of the cover photo, name: id, required: false,
+    type: numberic_string}
+  offset_x: {default: true, desp: 'When non-zero, the cover image overflows horizontally.
+      The value indicates the offset percentage of the total image width from the
+      left [0-100]', name: offset_x, required: false, type: float}
+  offset_y: {default: true, desp: 'When non-zero, the cover photo overflows vertically.
+      The value indicates the offset percentage of the total image height from the
+      top [0-100]', name: offset_y, required: false, type: float}
+  source: {default: true, desp: Direct URL for the person's cover photo image, name: source,
+    required: false, type: string}
+name: cover-photo
+type: node

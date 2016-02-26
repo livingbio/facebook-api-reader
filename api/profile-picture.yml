@@ -1,0 +1,7 @@
+fields:
+  id: {default: false, desp: The comment ID, name: id, required: false, type: string}
+  url: {desp: URL of the profile picture, name: url, type: string}
+  is_silhouette: {desp: True if the profile picture is the default 'silhouette' picture, name: is_silhouette, type: bool}
+
+name: profile-picture
+type: node

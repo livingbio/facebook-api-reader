@@ -1,0 +1,32 @@
+fields:
+  attachment: {default: false, desp: Link or photo attached to the comment, name: attachment,
+    required: false, type: StoryAttachment}
+  can_comment: {default: false, desp: Whether the viewer can reply to this comment,
+    name: can_comment, required: false, type: bool}
+  can_hide: {default: false, desp: Whether the viewer can hide this comment, name: can_hide,
+    required: false, type: boolean}
+  can_like: {default: false, desp: Whether the viewer can like this comment, name: can_like,
+    required: false, type: boolean}
+  can_remove: {default: false, desp: Whether the viewer can remove this comment, name: can_remove,
+    required: false, type: bool}
+  comment_count: {default: false, desp: Number of replies to this comment, name: comment_count,
+    required: false, type: int32}
+  created_time: {default: false, desp: The time this comment was made, name: created_time,
+    required: false, type: datetime}
+  from: {default: false, desp: The person that made this comment, name: from, required: false,
+    type: User}
+  id: {default: false, desp: The comment ID, name: id, required: false, type: string}
+  like_count: {default: false, desp: Number of times this comment was liked, name: like_count,
+    required: false, type: int32}
+  message: {default: false, desp: The comment text, name: message, required: false,
+    type: string}
+  message_tags: {default: false, desp: Profiles tagged in message., name: message_tags,
+    required: false, type: object}
+  object: {default: false, desp: Parent object this comment was made on, name: object,
+    required: false, type: Object}
+  parent: {default: false, desp: 'For comment replies, this the comment that this
+      is a reply to', name: parent, required: false, type: Comment}
+  user_likes: {default: false, desp: Whether the viewer has liked this comment, name: user_likes,
+    required: false, type: bool}
+name: comment
+type: node

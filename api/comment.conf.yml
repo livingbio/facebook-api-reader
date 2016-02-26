@@ -1,0 +1,11 @@
+accept_fields: [id, attachment, comment_count, created_time, from, like_count, message, user_likes, object]
+update_fields: [attachment, message]
+insert_fields: [attachment, message, object]
+insert_example: "{'attachment':{'id': '123'}, 'message': 'test message', 'object': {'id': '456'} }"
+
+edges:
+    likes:
+        type: Like
+
+    comments:
+        type: Comment

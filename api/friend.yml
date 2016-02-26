@@ -1,0 +1,7 @@
+fields:
+  object: {default: false, desp: Target object this friendship was made on, name: object,
+    required: false, type: Object}
+  from: {default: false, desp: The person who create friendship, name: from, required: false,
+    type: User}
+name: friend
+type: node

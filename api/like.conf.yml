@@ -1,0 +1,2 @@
+accept_fields: [id, from, object]
+insert_fields: [object]

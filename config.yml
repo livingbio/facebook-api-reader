@@ -1,0 +1,75 @@
+# there are two data type, node and struct in facebook api
+# sturct doesn't contain an id
+# there are two edge type in facebook api
+# one is hidden (ex friends, no id for the relationship, has unique )
+# one is edge (ex comment )
+
+# search
+# upload image
+
+nodes:
+    Comment:
+        url: https://developers.facebook.com/docs/graph-api/reference/v2.3/comment
+        fields: [id, attachment, comment_count, created_time, from, like_count, message, user_likes]
+
+    # Link:
+    #     url: https://developers.facebook.com/docs/graph-api/reference/v2.3/link
+
+    # Status:
+    #     url: https://developers.facebook.com/docs/graph-api/reference/v2.3/status
+    #     fields: [id, from, message, updated_time]
+
+    Page:
+        url: https://developers.facebook.com/docs/graph-api/reference/page
+        fields: [id, about, bio, category, cover, description, name]
+
+    User:
+        url: https://developers.facebook.com/docs/graph-api/reference/user
+        fields: [id, about, address, age_range, bio, birthday, education, email, first_name, gender, last_name, middle_name, name, relationship_status, languages, religion, verified, work, cover, political]
+
+    Post:
+        url: https://developers.facebook.com/docs/graph-api/reference/v2.3/post
+        fields: [id, admin_creator, caption, created_time, description, from, icron, link, message, name, object_id, picture, privacy, shares, source, to, type, updated_time]
+
+    Notification:
+        url: https://developers.facebook.com/docs/graph-api/reference/v2.3/notification
+        fields: [id, from, to, created_time, updated_time, title, link, unread, object]
+
+    Album:
+        url: https://developers.facebook.com/docs/graph-api/reference/v2.3/album
+        fields: [id, created_time, count, cover_photo, description, from, link, name, privacy, updated_time]
+
+    Photo:
+        url: https://developers.facebook.com/docs/graph-api/reference/photo
+        fields: [id, created_time, from, height, icon, link, name, updated_time, width]
+
+    # Video:
+    #     url: https://developers.facebook.com/docs/graph-api/reference/video
+    #     fields: [id, created_time, description, embed_html, from, icon, name, source, updated_time, privacy]
+
+    Location:
+        url: https://developers.facebook.com/docs/graph-api/reference/location
+        fields: [city, country, latitude, longitude, name, region, state, street, zip]
+
+    # AgeRange:
+    #     url: https://developers.facebook.com/docs/graph-api/reference/age-range
+
+    # EducationExperience:
+    #     url: https://developers.facebook.com/docs/graph-api/reference/education-experience
+    #     fields: [classes, concentration, degree, school, type, year]
+
+    Experience:
+        url: https://developers.facebook.com/docs/graph-api/reference/experience
+        fields: [id, description, name, from]
+
+    # WorkExperience:
+    #     url: https://developers.facebook.com/docs/graph-api/reference/work-experience
+    #     fields: [description, employer, end_date, from, location, position, start_date]
+
+    CoverPhoto:
+        url: https://developers.facebook.com/docs/graph-api/reference/cover-photo
+        fields: [id, source]
+
+    StoryAttachment:
+        url: https://developers.facebook.com/docs/graph-api/reference/v2.3/story_attachment
+        fields: [description, title, type, url]

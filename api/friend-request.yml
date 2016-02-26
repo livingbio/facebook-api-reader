@@ -1,0 +1,17 @@
+fields:
+  object: {default: false, desp: The person to whom the friend request was sent. This will always be the current user., name: object,
+    required: false, type: User}
+  from: {default: false, desp: The person who sent the friend request, name: from, required: false,
+    type: User}
+  created_time: {default: false, desp: The time this comment was made, name: created_time,
+    required: false, type: datetime}
+  message: {default: false, desp: The comment text, name: message, required: false,
+    type: string}
+  unread: {default: false, desp: Indicates that the notification is unread. Note that
+      'read' notifications will not be accessible., name: unread, required: false,
+    type: bool}
+  updated_time: {default: false, desp: When the notification was last updated., name: updated_time,
+    required: false, type: datetime}
+name: friend-request
+type: node
+

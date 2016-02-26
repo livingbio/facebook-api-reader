@@ -1,0 +1,10 @@
+accept_fields: [id, about, bio, category, cover, description, name]
+update_fields: [about, bio, category, cover, description, name]
+insert_fields: [about, bio, category, cover, description, name]
+
+edges:
+    feed:
+        type: Post
+
+    friends:
+        type: Friend

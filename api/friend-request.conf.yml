@@ -1,0 +1,3 @@
+accept_fields: [id, from, object, created_time, message, unread, updated_time]
+update_fields: [unread]
+insert_fields: [object, message]

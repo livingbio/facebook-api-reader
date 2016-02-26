@@ -1,0 +1,10 @@
+fields:
+  from: {default: false, desp: The person that made this post report, name: from, required: false,
+    type: User}
+  object: {default: false, desp: Parent object this post report was made on, name: object,
+    required: false, type: Object}
+  message: {default: false, desp: The comment text, name: message, required: false,
+    type: string}
+  state: {desp: The process state, name: state, type: string}
+name: post-report
+type: node

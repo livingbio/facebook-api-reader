@@ -1,0 +1,1 @@
+accept_fields: [description, employer, end_date, from, location, position, start_date]

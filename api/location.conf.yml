@@ -1,0 +1,11 @@
+accept_fields: [id, city, country, latitude, longitude, name, region, state, street, zip]
+update_fields: [city, country, latitude, longitude, name, region, state, street, zip]
+insert_fields: [city, country, latitude, longitude, name, region, state, street, zip]
+type: node
+fields:
+    id:
+        default: false
+        desp: "The location's id."
+        name: 'id'
+        required: false
+        type: string

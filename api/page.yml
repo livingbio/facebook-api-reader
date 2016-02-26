@@ -1,0 +1,228 @@
+fields:
+  about: {default: true, desp: Information about the Page, name: about, required: false,
+    type: string}
+  access_token: {default: false, desp: The access token you can use to act as the
+      Page. Only visible to Page Admins, name: access_token, required: false, type: string}
+  ad_campaign: {default: false, desp: The Page's currently running promotion campaign,
+    name: ad_campaign, required: false, type: AdCampaign}
+  affiliation: {default: true, desp: Affiliation of this person. Applicable to Pages
+      representing people, name: affiliation, required: false, type: string}
+  app_id: {default: true, desp: App ID for app-owned Pages and app Pages, name: app_id,
+    required: false, type: id}
+  app_links: {default: false, desp: AppLinks data associated with the Page's URL,
+    name: app_links, required: false, type: AppLinks}
+  artists_we_like: {default: true, desp: Artists the band likes. Applicable to Bands,
+    name: artists_we_like, required: false, type: string}
+  attire: {default: true, desp: 'Dress code of the business. Applicable to Restaurants
+      or Nightlife. Can be one of Casual, Dressy or Unspecified', name: attire, required: false,
+    type: string}
+  awards: {default: true, desp: The awards information of the film. Applicable to
+      Films, name: awards, required: false, type: string}
+  band_interests: {default: true, desp: Band interests. Applicable to Bands, name: band_interests,
+    required: false, type: string}
+  band_members: {default: true, desp: Members of the band. Applicable to Bands, name: band_members,
+    required: false, type: string}
+  best_page: {default: false, desp: The best available Page on Facebook for the concept
+      represented by this Page. The best available Page takes into account authenticity
+      and the number of likes, name: best_page, required: false, type: Page}
+  bio: {default: true, desp: Biography of the band. Applicable to Bands, name: bio,
+    required: false, type: string}
+  birthday: {default: true, desp: Birthday of this person. Applicable to Pages representing
+      people, name: birthday, required: false, type: string}
+  booking_agent: {default: true, desp: Booking agent of the band. Applicable to Bands,
+    name: booking_agent, required: false, type: string}
+  built: {default: true, desp: Year vehicle was built. Applicable to Vehicles, name: built,
+    required: false, type: string}
+  business: {default: false, desp: The Business associated with this Page, name: business,
+    required: false, type: ''}
+  can_post: {default: true, desp: Whether the current session user can post on this
+      Page, name: can_post, required: false, type: bool}
+  category: {default: true, desp: 'The Page''s category. e.g. Product/Service, Computers/Technology',
+    name: category, required: true, type: string}
+  category_list: {default: true, desp: The Page's sub-categories, name: category_list,
+    required: false, type: 'PageCategory[]'}
+  checkins: {default: true, desp: Number of checkins at a place represented by a Page,
+    name: checkins, required: true, type: unsigned}
+  company_overview: {default: true, desp: The company overview. Applicable to Companies,
+    name: company_overview, required: false, type: string}
+  contact_address: {default: false, desp: The mailing or contact address for this
+      page. This field will be blank if the contact address is the same as the physical
+      address, name: contact_address, required: false, type: MailingAddress}
+  context: {default: false, desp: Social context for this Page, name: context, required: false,
+    type: OpenGraphContext}
+  country_page_likes: {default: true, desp: 'If this is a Page in a Global Pages hierarchy,
+      the number of people who are being directed to this Page.', name: country_page_likes,
+    required: false, type: unsigned}
+  cover: {default: true, desp: Information about the page's cover photo, name: cover,
+    required: false, type: CoverPhoto}
+  culinary_team: {default: true, desp: Culinary team of the business. Applicable to
+      Restaurants or Nightlife, name: culinary_team, required: false, type: string}
+  current_location: {default: true, desp: Current location of the Page, name: current_location,
+    required: false, type: string}
+  description: {default: true, desp: The description of the Page, name: description,
+    required: true, type: string}
+  description_html: {default: false, desp: The description of the Page in raw HTML,
+    name: description_html, required: false, type: string}
+  directed_by: {default: true, desp: The director of the film. Applicable to Films,
+    name: directed_by, required: false, type: string}
+  emails: {default: false, desp: The emails listed in the About section of a Page,
+    name: emails, required: false, type: 'string[]'}
+  engagement: {default: false, desp: The social sentence and like count information
+      for this Page. This is the same info used for the like button, name: engagement,
+    required: false, type: Engagement}
+  featured_video: {default: false, desp: Video Featured by the Page.  Only visible
+      to the Page admin, name: featured_video, required: false, type: Video}
+  features: {default: true, desp: Features of the vehicle. Applicable to Vehicles,
+    name: features, required: false, type: string}
+  food_styles: {default: false, desp: The restaurant's food styles. Applicable to
+      Restaurants, name: food_styles, required: false, type: 'string[]'}
+  founded: {default: true, desp: When the company was founded. Applicable to Pages
+      in the Company category, name: founded, required: false, type: string}
+  general_info: {default: true, desp: General information provided by the Page, name: general_info,
+    required: false, type: string}
+  general_manager: {default: true, desp: General manager of the business. Applicable
+      to Restaurants or Nightlife, name: general_manager, required: false, type: string}
+  genre: {default: true, desp: The genre of the film. Applicable to Films, name: genre,
+    required: false, type: string}
+  global_brand_page_name: {default: false, desp: The name of the Page with country
+      codes appended for Global Brand Pages. Only visible to the Page admin, name: global_brand_page_name,
+    required: false, type: string}
+  global_brand_parent_page: {default: false, desp: This brand's global (parent) Page,
+    name: global_brand_parent_page, required: false, type: Page}
+  global_brand_root_id: {default: true, desp: This brand's global Root ID, name: global_brand_root_id,
+    required: false, type: numberic_string}
+  has_added_app: {default: true, desp: Indicates whether this Page has added the app
+      making the query in a Page tab, name: has_added_app, required: false, type: bool}
+  hometown: {default: true, desp: Hometown of the band. Applicable to Bands, name: hometown,
+    required: false, type: string}
+  hours: {default: true, desp: 'Indicates a single range of opening hours for a day.
+      Each day can have 2 different hours ranges. The keys in the map are in the form
+      of {day}_{number}_{status}.  {day} should be the first 3 characters of the day
+      of the week, {number} should be either 1 or 2 to allow for the two different
+      hours ranges per day. {status} should be either open or close to delineate the
+      start or end of a time range. An example would be mon_1_open with value 17:00
+      and mon_1_close with value 21:15 which would represent a single opening range
+      of 5pm to 9:15pm on Mondays', name: hours, required: false, type: 'map<string,'}
+  id: {default: true, desp: Page ID. No access token is required to access this field,
+    name: id, required: true, type: numberic_string}
+  impressum: {default: false, desp: Legal information about the Page publishers, name: impressum,
+    required: false, type: string}
+  influences: {default: true, desp: Influences on the band. Applicable to Bands, name: influences,
+    required: false, type: string}
+  is_community_page: {default: true, desp: Indicates whether the Page is a community
+      Page, name: is_community_page, required: false, type: bool}
+  is_permanently_closed: {default: false, desp: Whether the business corresponding
+      to this Page is permanently closed, name: is_permanently_closed, required: false,
+    type: bool}
+  is_published: {default: true, desp: Indicates whether the Page is published and
+      visible to non-admins, name: is_published, required: false, type: bool}
+  is_unclaimed: {default: false, desp: Indicates whether the Page is unclaimed, name: is_unclaimed,
+    required: false, type: bool}
+  is_verified: {default: false, desp: Pages with a large number of followers can be
+      manually verified by Facebook as having an authentic identity. This field indicates
+      whether the page is verified by this process, name: is_verified, required: false,
+    type: bool}
+  keywords: {default: true, desp: Deprecated. Returns nullDeprecated, name: keywords,
+    required: false, type: 'null'}
+  likes: {default: true, desp: The number of users who like the Page. For Global Brand
+      Pages this is the count for all pages across the brand, name: likes, required: false,
+    type: unsigned}
+  link: {default: true, desp: The Page's Facebook URL, name: link, required: true,
+    type: string}
+  location: {default: true, desp: The location of this place. Applicable to all Places,
+    name: location, required: false, type: Location}
+  members: {default: true, desp: Members of this org. Applicable to Pages representing
+      Team Orgs, name: members, required: false, type: string}
+  mission: {default: true, desp: The company mission. Applicable to Companies, name: mission,
+    required: false, type: string}
+  mpg: {default: true, desp: MPG of the vehicle. Applicable to Vehicles, name: mpg,
+    required: false, type: string}
+  name: {default: true, desp: The name of the Page, name: name, required: true, type: string}
+  name_with_location_descriptor: {default: true, desp: The name of the Page with its
+      location and/or global brand descriptor, name: name_with_location_descriptor,
+    required: false, type: string}
+  network: {default: true, desp: The TV network for the TV show. Applicable to TV
+      Shows, name: network, required: false, type: string}
+  new_like_count: {default: true, desp: 'The number of people who have liked the Page,
+      since the last login. Only visible to a page admin', name: new_like_count, required: false,
+    type: unsigned}
+  offer_eligible: {default: true, desp: Offer eligibility status. Only visible to
+      a page admin, name: offer_eligible, required: false, type: bool}
+  parent_page: {default: true, desp: Parent Page for this Page, name: parent_page,
+    required: false, type: Page}
+  parking: {default: true, desp: Parking information. Applicable to Businesses and
+      Places, name: parking, required: false, type: PageParking}
+  payment_options: {default: true, desp: Payment options accepted by the business.
+      Applicable to Restaurants or Nightlife, name: payment_options, required: false,
+    type: PagePaymentOptions}
+  personal_info: {default: true, desp: Personal information. Applicable to Pages representing
+      People, name: personal_info, required: false, type: string}
+  personal_interests: {default: true, desp: Personal interests. Applicable to Pages
+      representing People, name: personal_interests, required: false, type: string}
+  pharma_safety_info: {default: true, desp: Pharmacy safety information. Applicable
+      to Pharmaceutical companies, name: pharma_safety_info, required: false, type: string}
+  phone: {default: true, desp: Phone number provided by a Page, name: phone, required: false,
+    type: string}
+  plot_outline: {default: true, desp: The plot outline of the film. Applicable to
+      Films, name: plot_outline, required: false, type: string}
+  press_contact: {default: true, desp: Press contact information of the band. Applicable
+      to Bands, name: press_contact, required: false, type: string}
+  price_range: {default: true, desp: 'Price range of the business. Applicable to Restaurants
+      or Nightlife. Can be one of $ (0-10), $$ (10-30), $$$ (30-50), $$$$ (50+) or
+      Unspecified', name: price_range, required: false, type: string}
+  produced_by: {default: true, desp: The productor of the film. Applicable to Films,
+    name: produced_by, required: false, type: string}
+  products: {default: true, desp: The products of this company. Applicable to Companies,
+    name: products, required: false, type: string}
+  promotion_eligible: {default: true, desp: Reason why a post isn't eligible for boosting.
+      Only visible to Page Admins, name: promotion_eligible, required: false, type: bool}
+  promotion_ineligible_reason: {default: true, desp: 'Reason, for which boosted posts
+      are not eligible. Only visible to a page admin', name: promotion_ineligible_reason,
+    required: false, type: string}
+  public_transit: {default: true, desp: Public transit to the business. Applicable
+      to Restaurants or Nightlife, name: public_transit, required: false, type: string}
+  record_label: {default: true, desp: Record label of the band. Applicable to Bands,
+    name: record_label, required: false, type: string}
+  release_date: {default: true, desp: The film's release date. Applicable to Films,
+    name: release_date, required: false, type: string}
+  restaurant_services: {default: true, desp: Services the restaurant provides. Applicable
+      to Restaurants, name: restaurant_services, required: false, type: PageRestaurantServices}
+  restaurant_specialties: {default: true, desp: The restaurant's specialties. Applicable
+      to Restaurants, name: restaurant_specialties, required: false, type: PageRestaurantSpecialties}
+  schedule: {default: true, desp: The air schedule of the TV show. Applicable to TV
+      Shows, name: schedule, required: false, type: string}
+  screenplay_by: {default: true, desp: The screenwriter of the film. Applicable to
+      Films, name: screenplay_by, required: false, type: string}
+  season: {default: true, desp: The season information of the TV Show. Applicable
+      to TV Shows, name: season, required: false, type: string}
+  single_line_address: {default: false, desp: 'The page address, if any, in a simple
+      single line format.', name: single_line_address, required: false, type: string}
+  starring: {default: true, desp: The cast of the film. Applicable to Films, name: starring,
+    required: false, type: string}
+  start_info: {default: false, desp: Information about when the entity represented
+      by the Page was started, name: start_info, required: false, type: PageStartInfo}
+  store_number: {default: true, desp: Unique store number for this location Page,
+    name: store_number, required: false, type: unsigned}
+  studio: {default: true, desp: The studio for the film production. Applicable to
+      Films, name: studio, required: false, type: string}
+  talking_about_count: {default: true, desp: The number of people talking about this
+      Page, name: talking_about_count, required: false, type: unsigned}
+  unread_message_count: {default: true, desp: Unread message count for the Page. Only
+      visible to a page admin, name: unread_message_count, required: false, type: unsigned}
+  unread_notif_count: {default: true, desp: Number of unread notifications. Only visible
+      to a page admin, name: unread_notif_count, required: false, type: unsigned}
+  unseen_message_count: {default: true, desp: Unseen message count for the Page. Only
+      visible to a page admin, name: unseen_message_count, required: false, type: unsigned}
+  username: {default: true, desp: 'The alias of the Page. For example, for www.facebook.com/platform
+      the username is ''platform''', name: username, required: true, type: string}
+  voip_info: {default: false, desp: Voip info, name: voip_info, required: false, type: VoipInfo}
+  website: {default: true, desp: The URL of the Page's website, name: website, required: false,
+    type: string}
+  were_here_count: {default: true, desp: 'The number of visits to this Page''s location.
+      If the Page setting Show map, check-ins and star ratings on the Page (under
+      Page Settings > Page Info > Address) is disabled, then this value will also
+      be disabled', name: were_here_count, required: false, type: unsigned}
+  written_by: {default: true, desp: The writer of the TV show. Applicable to TV Shows,
+    name: written_by, required: false, type: string}
+name: page
+type: node

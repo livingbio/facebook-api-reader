@@ -1,0 +1,13 @@
+accept_fields: [id, created_time, count, cover_photo, description, from, link, name, privacy, updated_time]
+update_fields: [cover_photo, description, name, privacy]
+insert_fields: [cover_photo, description, name, privacy]
+
+edges:
+    likes:
+        type: Like
+
+    comments:
+        type: Comment
+
+    photos:
+        type: Photo

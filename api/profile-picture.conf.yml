@@ -1,0 +1,3 @@
+accept_fields: [id, url]
+update_fields: [url]
+insert_fields: [url]

@@ -1,0 +1,14 @@
+fields:
+  city: {default: true, desp: City, name: city, required: false, type: string}
+  country: {default: true, desp: Country, name: country, required: false, type: string}
+  latitude: {default: true, desp: Latitude, name: latitude, required: false, type: float}
+  located_in: {default: true, desp: The parent location if this location is located
+      within another location, name: located_in, required: false, type: id}
+  longitude: {default: true, desp: Longitude, name: longitude, required: false, type: float}
+  name: {default: true, desp: Name, name: name, required: false, type: string}
+  region: {default: false, desp: Region, name: region, required: false, type: string}
+  state: {default: true, desp: State, name: state, required: false, type: string}
+  street: {default: true, desp: Street, name: street, required: false, type: string}
+  zip: {default: true, desp: Zip code, name: zip, required: false, type: string}
+name: location
+type: struct

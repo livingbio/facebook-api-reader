@@ -1,0 +1,16 @@
+fields:
+  description: {default: false, desp: Text accompanying the attachment, name: description,
+    required: false, type: string}
+  description_tags: {default: false, desp: Profiles tagged in the text accompanying
+      the attachment, name: description_tags, required: false, type: 'Profile[]'}
+  media: {default: false, desp: 'Media object (photo, link etc.) contained in the
+      attachment', name: media, required: false, type: StoryAttachmentMedia}
+  target: {default: false, desp: Object that the attachment links to, name: target,
+    required: false, type: StoryAttachmentTarget}
+  title: {default: false, desp: Title of the attachment, name: title, required: false,
+    type: string}
+  type: {default: false, desp: Type of the attachment, name: type, required: false,
+    type: string}
+  url: {default: false, desp: URL of the attachment, name: url, required: false, type: string}
+name: story_attachment
+type: struct

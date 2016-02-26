@@ -1,0 +1,82 @@
+accept_fields: [profile_picture, id, about, address, bio, birthday, education, email, first_name, gender, last_name, middle_name, name, relationship_status, languages, religion, verified, work, cover, political]
+update_fields: [profile_picture, about, address, bio, birthday, education, email, first_name, gender, last_name, middle_name, name, relationship_status, languages, religion, verified, work, cover, political]
+insert_fields: [profile_picture, about, address, bio, birthday, education, email, first_name, gender, last_name, middle_name, name, relationship_status, languages, religion, verified, work, cover, political]
+fields:
+    education:
+        default: true
+        desp: The person's education
+        name: education
+        required: false
+        type: 'Experience[]'
+    work:
+        default: true
+        desp: Details of a person`s work experience
+        name: work
+        required: false
+        type: 'Experience[]'
+
+    profile_picture:
+        name: profile_picture
+        type: ProfilePicture
+
+
+# just like many to many relationship
+# should be able to handle a lot of edges
+# have an manager to status the results
+edges:
+    feed:
+        type: Post
+
+    friends:
+        type: Friend
+
+    friendrequests:
+        type: FriendRequest
+
+    notifications:
+        type: Notification
+
+    # likes:
+    #     type: Like
+
+    # comments:
+    #     type: Comment
+
+    # notifications:
+    #     type: notifications
+    #     to: Notification
+
+    # friends:
+    #     # need to delete friend requests automatically
+    #     type: friends
+    #     to: User
+
+    # likes:
+    #     # the original facebook define it as user to page only
+    #     type: likes
+    #     to: [Post, Comment, Page]
+
+    # comments:
+    #     type: comments
+    #     to: Comment
+
+    # friendrequests:
+    #     type: friendrequests
+    #     to: FriendRequests # need to add FriendRequests Node
+
+apis:
+    login:
+        desp: let user login
+        method: post
+        params:
+            name:
+                type: string
+                desp: user's name
+            password:
+                type: string
+                desp: user's password
+
+    logout:
+        desp: let user logout
+        method: get
+

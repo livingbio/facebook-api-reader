@@ -1,0 +1,3 @@
+accept_fields: [from, object, message, state, id]
+update_fields: [object, message, state]
+insert_fields: [object, message]

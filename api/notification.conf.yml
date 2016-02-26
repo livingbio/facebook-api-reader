@@ -1,0 +1,7 @@
+accept_fields: [id, from, to, created_time, updated_time, title, link, unread, object]
+update_fields: [unread]
+insert_fields: [title, link, object]
+fields:
+    unread: {default: false, desp: Indicates that the notification is unread. Note that
+      'read' notifications will not be accessible., name: unread, required: false,
+    type: bool}
