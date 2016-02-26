@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class user(_Node):
     namespace = "user"
     get_validater = Schema({
@@ -180,7 +181,6 @@ Enter a valid credit card
         """
         return super(user, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /user/:id Delete user information
@@ -191,7 +191,6 @@ Enter a valid credit card
                    { "success": bool }
         """
         return super(user, self).delete()
-
 
     def list_feed(self, cursor):
         """
@@ -277,7 +276,6 @@ Enter a valid credit card
         """
         return self._list_edges("notifications", cursor)
 
-
     def login(self):
         """
         @api { post }  /user/login let user login
@@ -290,6 +288,7 @@ Enter a valid credit card
         @apiExample {json} Response:
                    { "success": bool }
         """
+
     def logout(self):
         """
         @api { get }  /user/logout let user logout

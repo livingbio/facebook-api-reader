@@ -2,7 +2,8 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
-class cover-photo(_Node):
+
+class cover - photo(_Node):
     namespace = "cover-photo"
     get_validater = Schema({
         Optional('id'): is_numberic_string,
@@ -28,7 +29,7 @@ class cover-photo(_Node):
         @apiSuccess { string } source Direct URL for the person's cover photo image
 
         """
-        return super(cover-photo, cls).get(id)
+        return super(cover - photo, cls).get(id)
 
     def update(self, data):
         """
@@ -42,7 +43,7 @@ class cover-photo(_Node):
                    { "success": bool }
 
         """
-        return super(cover-photo, self).update(data)
+        return super(cover - photo, self).update(data)
 
     @classmethod
     def insert(cls, data):
@@ -58,8 +59,7 @@ class cover-photo(_Node):
                    { "success": bool }
 
         """
-        return super(cover-photo, cls).insert(data)
-
+        return super(cover - photo, cls).insert(data)
 
     def delete(self):
         """
@@ -70,7 +70,4 @@ class cover-photo(_Node):
         @apiExample {json} Response:
                    { "success": bool }
         """
-        return super(cover-photo, self).delete()
-
-
-
+        return super(cover - photo, self).delete()

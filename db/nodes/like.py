@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class like(_Node):
     namespace = "like"
     get_validater = Schema({
@@ -50,7 +51,6 @@ class like(_Node):
         """
         return super(like, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /like/:id Delete like information
@@ -61,6 +61,3 @@ class like(_Node):
                    { "success": bool }
         """
         return super(like, self).delete()
-
-
-

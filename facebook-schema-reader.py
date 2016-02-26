@@ -2,8 +2,8 @@ import requests
 import re
 from bs4 import BeautifulSoup
 import pandas
-re_table = re.compile(r'<h3>(\w+)</h3><div class="_57-c">(<table class.*</table>)</div>')
-
+re_table = re.compile(
+    r'<h3>(\w+)</h3><div class="_57-c">(<table class.*</table>)</div>')
 
 
 def parse_doc(url, fields=set()):
@@ -21,7 +21,8 @@ def parse_doc(url, fields=set()):
         end = content.find('</table>', start)
 
         content = content[start:end + len('</table>')]
-        if end < 0: break
+        if end < 0:
+            break
 
         index = end
         if title == 'Fields':
@@ -38,7 +39,6 @@ def parse_doc(url, fields=set()):
                 types = body.select('tr > td:nth-of-type(3)')
 
                 assert len(codes) == len(types) == len(desps)
-
 
                 new_codes = []
                 new_types = []
@@ -62,11 +62,10 @@ def parse_doc(url, fields=set()):
                 "fields": {}
             }
 
-
             for code, _type, desp in zip(codes, types, desps):
                 desp = desp.text
                 # if '.' in desp:
-                    # desp = desp[0:desp.find('.')]
+                # desp = desp[0:desp.find('.')]
 
                 required = 'Core' in desp
                 default = "Default" in desp
@@ -90,7 +89,6 @@ def parse_doc(url, fields=set()):
 
                 _type = _type.split(' ')[0]
                 _type = _type.replace('`', '')
-
 
                 if 'list<' in _type:
                     _type = _type.replace('list<', '').replace('>', '')
@@ -132,5 +130,3 @@ if __name__ == '__main__':
     # parse_doc('https://developers.facebook.com/docs/graph-api/reference/v2.3/notification')
     # parse_doc('https://developers.facebook.com/docs/graph-api/reference/photo')
     # parse_doc('https://developers.facebook.com/docs/graph-api/reference/video')
-
-

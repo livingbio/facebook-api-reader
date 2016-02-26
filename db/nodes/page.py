@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class page(_Node):
     namespace = "page"
     get_validater = Schema({
@@ -90,7 +91,6 @@ class page(_Node):
         """
         return super(page, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /page/:id Delete page information
@@ -101,7 +101,6 @@ class page(_Node):
                    { "success": bool }
         """
         return super(page, self).delete()
-
 
     def list_feed(self, cursor):
         """
@@ -144,5 +143,3 @@ class page(_Node):
         @apiSuccess { Friend } friends related Friend
         """
         return self._list_edges("friends", cursor)
-
-

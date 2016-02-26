@@ -2,7 +2,8 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
-class post-report(_Node):
+
+class post - report(_Node):
     namespace = "post-report"
     get_validater = Schema({
         Optional('from'): is_User,
@@ -35,7 +36,7 @@ class post-report(_Node):
         @apiSuccess { string } state The process state
 
         """
-        return super(post-report, cls).get(id)
+        return super(post - report, cls).get(id)
 
     def update(self, data):
         """
@@ -51,7 +52,7 @@ class post-report(_Node):
                    { "success": bool }
 
         """
-        return super(post-report, self).update(data)
+        return super(post - report, self).update(data)
 
     @classmethod
     def insert(cls, data):
@@ -68,8 +69,7 @@ class post-report(_Node):
                    { "success": bool }
 
         """
-        return super(post-report, cls).insert(data)
-
+        return super(post - report, cls).insert(data)
 
     def delete(self):
         """
@@ -80,7 +80,4 @@ class post-report(_Node):
         @apiExample {json} Response:
                    { "success": bool }
         """
-        return super(post-report, self).delete()
-
-
-
+        return super(post - report, self).delete()

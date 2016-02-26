@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class friend(_Node):
     namespace = "friend"
     get_validater = Schema({
@@ -50,7 +51,6 @@ class friend(_Node):
         """
         return super(friend, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /friend/:id Delete friend information
@@ -61,6 +61,3 @@ class friend(_Node):
                    { "success": bool }
         """
         return super(friend, self).delete()
-
-
-

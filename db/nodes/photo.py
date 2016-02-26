@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class photo(_Node):
     namespace = "photo"
     get_validater = Schema({
@@ -44,7 +45,6 @@ class photo(_Node):
         """
         return super(photo, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /photo/:id Delete photo information
@@ -55,6 +55,3 @@ class photo(_Node):
                    { "success": bool }
         """
         return super(photo, self).delete()
-
-
-

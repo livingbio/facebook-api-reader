@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class experience(_Node):
     namespace = "experience"
     get_validater = Schema({
@@ -74,7 +75,6 @@ class experience(_Node):
         """
         return super(experience, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /experience/:id Delete experience information
@@ -85,6 +85,3 @@ class experience(_Node):
                    { "success": bool }
         """
         return super(experience, self).delete()
-
-
-

@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class story_attachment(_Node):
     namespace = "story_attachment"
     get_validater = Schema({
@@ -84,7 +85,6 @@ class story_attachment(_Node):
         """
         return super(story_attachment, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /story_attachment/:id Delete story_attachment information
@@ -95,6 +95,3 @@ class story_attachment(_Node):
                    { "success": bool }
         """
         return super(story_attachment, self).delete()
-
-
-

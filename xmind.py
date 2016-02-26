@@ -5,13 +5,15 @@ from collections import OrderedDict
 pattern = re.compile(r'<a name=.*>(.*)</a>')
 import csv
 
+
 class Node(object):
+
     def __init__(self, name, parent=None):
         self.name = name
         self.parent = parent
         self.label = None
         self.children = []
-        self._include = None # default
+        self._include = None  # default
         self._priority = None
 
         if parent:
@@ -90,13 +92,14 @@ def to_csv(filename):
                 continue
 
             m = pattern.findall(iline.decode('utf8'))
-            if not m: continue
+            if not m:
+                continue
             iline = m[0]
 
             level = iline.count('&nbsp;')
             name = iline.replace('&nbsp;', '')
 
-            path = path[:level+1]
+            path = path[:level + 1]
             parent = path[-1] if path else None
             path.append(Node(name, parent))
             # print path
@@ -131,8 +134,9 @@ def to_csv(filename):
         #         if len(tree[level0][level1]) == 1 and len(tree[level0][level1].values()[0]) > 1:
         #             print level0, '\t', level1, '\t', ",".join(tree[level0][level1].values()[0])
         #         else:
-        #             print level0, '\t', level1, '\t', ",".join(tree[level0][level1])
+        # print level0, '\t', level1, '\t', ",".join(tree[level0][level1])
 
 
 if __name__ == '__main__':
-    import clime; clime.start(debug=True)
+    import clime
+    clime.start(debug=True)

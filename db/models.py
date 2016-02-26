@@ -44,6 +44,7 @@ class Node(ndb.Model):
         obj.update(self.fields)
         return obj
 
+
 class Edge(ndb.Model):
     namespace = ndb.StringProperty()
     from_node = ndb.KeyProperty(Node)
@@ -56,7 +57,7 @@ class Edge(ndb.Model):
     @classmethod
     def create(cls, namespace, from_node, to_node):
         obj = cls(
-            id= "%s_%s" % ( from_node.key.id(), to_node.key.id()),
+            id="%s_%s" % (from_node.key.id(), to_node.key.id()),
             namespace=namespace,
             from_node=from_node,
             to_node=to_node
@@ -98,10 +99,8 @@ class EdgeManager(ndb.Model):
             Edge.namespace == self.namespace,
             Edge.deleted == False
         ).filter(
-            Edge.from_node==self.from_node
+            Edge.from_node == self.from_node
         ).order(-Edge.updated)
 
     def list(self, cursor=None):
         return self.query().fetch(50, start_cursor=cursor)
-
-

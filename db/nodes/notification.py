@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class notification(_Node):
     namespace = "notification"
     get_validater = Schema({
@@ -78,7 +79,6 @@ class notification(_Node):
         """
         return super(notification, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /notification/:id Delete notification information
@@ -89,6 +89,3 @@ class notification(_Node):
                    { "success": bool }
         """
         return super(notification, self).delete()
-
-
-

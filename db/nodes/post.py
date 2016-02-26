@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class post(_Node):
     namespace = "post"
     get_validater = Schema({
@@ -112,7 +113,6 @@ class post(_Node):
         """
         return super(post, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /post/:id Delete post information
@@ -123,7 +123,6 @@ class post(_Node):
                    { "success": bool }
         """
         return super(post, self).delete()
-
 
     def list_comments(self, cursor):
         """
@@ -187,7 +186,6 @@ class post(_Node):
         @apiSuccess { Report } reports related Report
         """
         return self._list_edges("reports", cursor)
-
 
     def search(self):
         """

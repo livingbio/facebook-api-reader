@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class comment(_Node):
     namespace = "comment"
     get_validater = Schema({
@@ -82,7 +83,6 @@ class comment(_Node):
         """
         return super(comment, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /comment/:id Delete comment information
@@ -93,7 +93,6 @@ class comment(_Node):
                    { "success": bool }
         """
         return super(comment, self).delete()
-
 
     def list_comments(self, cursor):
         """
@@ -136,5 +135,3 @@ class comment(_Node):
         @apiSuccess { Like } likes related Like
         """
         return self._list_edges("likes", cursor)
-
-

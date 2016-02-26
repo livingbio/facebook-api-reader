@@ -2,7 +2,8 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
-class friend-request(_Node):
+
+class friend - request(_Node):
     namespace = "friend-request"
     get_validater = Schema({
         Optional('created_time'): is_datetime,
@@ -37,7 +38,7 @@ class friend-request(_Node):
         @apiSuccess { datetime } updated_time When the notification was last updated.
 
         """
-        return super(friend-request, cls).get(id)
+        return super(friend - request, cls).get(id)
 
     def update(self, data):
         """
@@ -51,7 +52,7 @@ class friend-request(_Node):
                    { "success": bool }
 
         """
-        return super(friend-request, self).update(data)
+        return super(friend - request, self).update(data)
 
     @classmethod
     def insert(cls, data):
@@ -68,8 +69,7 @@ class friend-request(_Node):
                    { "success": bool }
 
         """
-        return super(friend-request, cls).insert(data)
-
+        return super(friend - request, cls).insert(data)
 
     def delete(self):
         """
@@ -80,7 +80,4 @@ class friend-request(_Node):
         @apiExample {json} Response:
                    { "success": bool }
         """
-        return super(friend-request, self).delete()
-
-
-
+        return super(friend - request, self).delete()

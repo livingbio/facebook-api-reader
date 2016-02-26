@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class album(_Node):
     namespace = "album"
     get_validater = Schema({
@@ -88,7 +89,6 @@ class album(_Node):
         """
         return super(album, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /album/:id Delete album information
@@ -99,7 +99,6 @@ class album(_Node):
                    { "success": bool }
         """
         return super(album, self).delete()
-
 
     def list_comments(self, cursor):
         """
@@ -163,5 +162,3 @@ class album(_Node):
         @apiSuccess { Photo } photos related Photo
         """
         return self._list_edges("photos", cursor)
-
-

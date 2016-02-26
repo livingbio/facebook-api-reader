@@ -2,7 +2,8 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
-class profile-picture(_Node):
+
+class profile - picture(_Node):
     namespace = "profile-picture"
     get_validater = Schema({
         Optional('id'): is_string,
@@ -28,7 +29,7 @@ class profile-picture(_Node):
         @apiSuccess { string } url URL of the profile picture
 
         """
-        return super(profile-picture, cls).get(id)
+        return super(profile - picture, cls).get(id)
 
     def update(self, data):
         """
@@ -42,7 +43,7 @@ class profile-picture(_Node):
                    { "success": bool }
 
         """
-        return super(profile-picture, self).update(data)
+        return super(profile - picture, self).update(data)
 
     @classmethod
     def insert(cls, data):
@@ -58,8 +59,7 @@ class profile-picture(_Node):
                    { "success": bool }
 
         """
-        return super(profile-picture, cls).insert(data)
-
+        return super(profile - picture, cls).insert(data)
 
     def delete(self):
         """
@@ -70,7 +70,4 @@ class profile-picture(_Node):
         @apiExample {json} Response:
                    { "success": bool }
         """
-        return super(profile-picture, self).delete()
-
-
-
+        return super(profile - picture, self).delete()

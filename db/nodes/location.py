@@ -2,6 +2,7 @@ from db.models import _Node
 from schema import Schema
 from db.validator import *
 
+
 class location(_Node):
     namespace = "location"
     get_validater = Schema({
@@ -108,7 +109,6 @@ class location(_Node):
         """
         return super(location, cls).insert(data)
 
-
     def delete(self):
         """
         @api {delete} /location/:id Delete location information
@@ -119,6 +119,3 @@ class location(_Node):
                    { "success": bool }
         """
         return super(location, self).delete()
-
-
-

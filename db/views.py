@@ -65,15 +65,16 @@ class _Node(object):
     #         return method(cls, method)
 
 
-
-
 class NameSpaceHandler(webapp2.RequestHandler):
+
     def post(self, namespace):
         _Node.set_namespace(namespace).insert(self.request)
         # create a new type
         pass
 
+
 class NodeHandler(webapp2.RequestHandler):
+
     def get(self, namespace, id):
         pass
 
@@ -83,11 +84,15 @@ class NodeHandler(webapp2.RequestHandler):
     def delete(self, namespace, id):
         pass
 
+
 class EdgeHandler(webapp2.RequestHandler):
+
     def get(self, namespace, id, edge_type):
         pass
 
+
 class MethodHandler(webapp2.RequestHandler):
+
     def get(self, namespace, method):
         pass
 

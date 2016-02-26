@@ -9,9 +9,11 @@ env = jinja2.Environment(
 )
 template = env.get_template('api-template.pyt')
 
+
 def gen_model():
     for config in os.listdir('./api'):
-        if '.conf' in config: continue
+        if '.conf' in config:
+            continue
 
         with open('./api/%s' % config) as ifile:
             config = yaml.load(ifile)
