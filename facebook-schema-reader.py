@@ -2,6 +2,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 import pandas
+import yaml
 re_table = re.compile(
     r'<h3>(\w+)</h3><div class="_57-c">(<table class.*</table>)</div>')
 
@@ -114,7 +115,6 @@ def parse_doc(url, fields=set()):
             return
 
 def auto_config():
-    import yaml
     config = yaml.load(open('config.yml'))
     for k in config['nodes']:
         parse_doc(**config['nodes'][k])

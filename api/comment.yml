@@ -9,6 +9,9 @@ fields:
     required: false, type: boolean}
   can_remove: {default: false, desp: Whether the viewer can remove this comment, name: can_remove,
     required: false, type: bool}
+  can_reply_privately: {default: false, desp: Whether the viewer can send a private
+      reply to this comment (Page viewers only), name: can_reply_privately, required: false,
+    type: boolean}
   comment_count: {default: false, desp: Number of replies to this comment, name: comment_count,
     required: false, type: int32}
   created_time: {default: false, desp: The time this comment was made, name: created_time,
@@ -20,13 +23,16 @@ fields:
     required: false, type: int32}
   message: {default: false, desp: The comment text, name: message, required: false,
     type: string}
-  message_tags: {default: false, desp: Profiles tagged in message., name: message_tags,
-    required: false, type: object}
-  object: {default: false, desp: Parent object this comment was made on, name: object,
-    required: false, type: Object}
+  message_tags: {default: false, desp: An array of Profiles tagged in message., name: message_tags,
+    required: false, type: 'object[]'}
+  object: {default: false, desp: 'For comments on a photo or video, this is that object.
+      Otherwise, this is empty.', name: object, required: false, type: Object}
   parent: {default: false, desp: 'For comment replies, this the comment that this
-      is a reply to', name: parent, required: false, type: Comment}
-  user_likes: {default: false, desp: Whether the viewer has liked this comment, name: user_likes,
+      is a reply to.', name: parent, required: false, type: Comment}
+  private_reply_conversation: {default: false, desp: 'For comments with private replies,
+      gets conversation between the Page and author of the comment (Page viewers only)',
+    name: private_reply_conversation, required: false, type: Conversation}
+  user_likes: {default: false, desp: Whether the viewer has liked this comment., name: user_likes,
     required: false, type: bool}
 name: comment
 type: node
